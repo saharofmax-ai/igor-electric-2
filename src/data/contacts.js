@@ -1,9 +1,9 @@
 export const contacts = {
   // Телефон для отображения
-  phone: '+7 (903) 221-31-95',
+  phone: '+7 (999) 556-78-91',
   
   // Телефон для клика (без пробелов и скобок)
-  phoneLink: 'tel:+79032213195',
+  phoneLink: 'tel:+79995567891',
   
   // Email для отображения
   email: 'text.by.igor@yandex.ru',
