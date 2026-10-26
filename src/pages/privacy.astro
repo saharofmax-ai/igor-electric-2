@@ -1,0 +1,77 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { site } from '../data/site.js';
+---
+
+<BaseLayout title={`Политика конфиденциальности — ${site.name}`}>
+  <article class="py-16 md:py-24 bg-white">
+    <div class="max-w-3xl mx-auto px-4">
+      
+      <h1 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-8">
+        Политика конфиденциальности
+      </h1>
+
+      <div class="prose prose-gray max-w-none text-gray-700 leading-relaxed space-y-6">
+        
+        <p class="text-sm text-gray-500">Последнее обновление: 19 октября 2026 г.</p>
+
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-3">1. Общие положения</h2>
+          <p>Настоящая Политика конфиденциальности описывает, как {site.name} собирает, использует и защищает персональные данные пользователей сайта.</p>
+          <p>Используя сайт, вы соглашаетесь с условиями данной Политики.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-3">2. Какие данные мы собираем</h2>
+          <p>Мы можем собирать следующие данные:</p>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>Имя и фамилию</li>
+            <li>Номер телефона</li>
+            <li>Адрес электронной почты</li>
+            <li>Текст обращения (описание задачи)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-3">3. Цели обработки данных</h2>
+          <p>Персональные данные используются для:</p>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>Связи с вами для уточнения деталей заказа</li>
+            <li>Обработки заявок и выполнения работ</li>
+            <li>Улучшения качества обслуживания</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-3">4. Передача данных третьим лицам</h2>
+          <p>Мы не передаём ваши персональные данные третьим лицам, за исключением случаев, предусмотренных законодательством РФ.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-3">5. Защита данных</h2>
+          <p>Мы принимаем необходимые организационные и технические меры для защиты персональных данных от несанкционированного доступа, изменения, раскрытия или уничтожения.</p>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-3">6. Права пользователя</h2>
+          <p>Вы имеете право:</p>
+          <ul class="list-disc pl-6 space-y-1">
+            <li>Получить информацию об обработке ваших данных</li>
+            <li>Требовать уточнения, блокирования или уничтожения данных</li>
+            <li>Отозвать согласие на обработку данных</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="text-2xl font-bold text-gray-900 mt-8 mb-3">7. Контактная информация</h2>
+          <p>По всем вопросам, связанным с обработкой персональных данных, обращайтесь:</p>
+          <p class="mt-2">
+            Телефон: <a href="tel:+79991234567" class="text-blue-700 hover:underline">+7 (999) 123-45-67</a><br/>
+            Email: <a href="mailto:igor@electric-landing.ru" class="text-blue-700 hover:underline">igor@electric-landing.ru</a>
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </article>
+</BaseLayout>

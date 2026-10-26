@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Базовые стили */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Отступ для якорных ссылок,Ы чтобы шапка не перекрывала заголовки */
+section[id] {
+  scroll-margin-top: 90px;
+}
+
+/* На мобильных устройствах увеличиваем отступ, так как шапка занимает больше места относительно экрана */
+@media (max-width: 768px) {
+  section[id] {
+    scroll-margin-top: 110px;
+  }
+}
+
+/* На очень маленьких экранах — ещё больше отступ */
+@media (max-width: 480px) {
+  section[id] {
+    scroll-margin-top: 130px;
+  }
+}

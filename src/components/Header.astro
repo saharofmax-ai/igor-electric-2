@@ -1,0 +1,84 @@
+---
+// Импортируем данные из наших файлов
+import { site } from '../data/site.js';
+import { contacts } from '../data/contacts.js';
+---
+
+<header class="bg-white shadow-sm sticky top-0 z-50">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+    
+    <!-- Логотип (картинка) -->
+    <a href="/" class="flex items-center gap-3">
+      <img src="/images/logo.png" alt={site.name} class="h-12 w-auto" />
+    </a>
+
+    <!-- Меню навигации (скрыто на мобильных, видно на десктопе) -->
+    <nav class="hidden md:flex gap-6">
+      <a href="#about" class="text-gray-700 hover:text-blue-700 transition-colors font-medium">Обо мне</a>
+      <a href="#services" class="text-gray-700 hover:text-blue-700 transition-colors font-medium">Услуги</a>
+      <a href="#prices" class="text-gray-700 hover:text-blue-700 transition-colors font-medium">Цены</a>
+      <a href="#portfolio" class="text-gray-700 hover:text-blue-700 transition-colors font-medium">Портфолио</a>
+      <a href="#reviews" class="text-gray-700 hover:text-blue-700 transition-colors font-medium">Отзывы</a>
+      <a href="#contacts" class="text-gray-700 hover:text-blue-700 transition-colors font-medium">Контакты</a>
+    </nav>
+
+    <!-- Кнопка с телефоном (скрыта на очень маленьких экранах) -->
+    <a 
+      href={contacts.phoneLink} 
+      class="bg-blue-700 text-white px-5 py-2 rounded-lg font-medium hover:bg-blue-800 active:bg-blue-900 active:scale-95 transition-all duration-150 hidden sm:block"
+    >
+      {contacts.phone}
+    </a>
+
+    <!-- Кнопка-бургер (видна только на мобильных) -->
+    <button 
+      id="burger-btn" 
+      class="md:hidden p-2 text-gray-700 hover:text-blue-700 active:text-blue-900 active:scale-90 transition-all duration-150"
+      aria-label="Открыть меню"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="3" y1="6" x2="21" y2="6"/>
+        <line x1="3" y1="12" x2="21" y2="12"/>
+        <line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+
+  </div>
+
+  <!-- Выпадающее мобильное меню (скрыто по умолчанию) -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg">
+    <nav class="flex flex-col px-4 py-4 space-y-3">
+      <a href="#about" class="mobile-link text-gray-700 hover:text-blue-700 hover:bg-gray-50 active:bg-gray-100 px-3 py-2 rounded-lg transition-colors font-medium">Обо мне</a>
+      <a href="#services" class="mobile-link text-gray-700 hover:text-blue-700 hover:bg-gray-50 active:bg-gray-100 px-3 py-2 rounded-lg transition-colors font-medium">Услуги</a>
+      <a href="#prices" class="mobile-link text-gray-700 hover:text-blue-700 hover:bg-gray-50 active:bg-gray-100 px-3 py-2 rounded-lg transition-colors font-medium">Цены</a>
+      <a href="#portfolio" class="mobile-link text-gray-700 hover:text-blue-700 hover:bg-gray-50 active:bg-gray-100 px-3 py-2 rounded-lg transition-colors font-medium">Портфолио</a>
+      <a href="#reviews" class="mobile-link text-gray-700 hover:text-blue-700 hover:bg-gray-50 active:bg-gray-100 px-3 py-2 rounded-lg transition-colors font-medium">Отзывы</a>
+      <a href="#contacts" class="mobile-link text-gray-700 hover:text-blue-700 hover:bg-gray-50 active:bg-gray-100 px-3 py-2 rounded-lg transition-colors font-medium">Контакты</a>
+      <a 
+        href={contacts.phoneLink} 
+        class="bg-blue-700 text-white text-center px-3 py-3 rounded-lg font-medium hover:bg-blue-800 active:bg-blue-900 active:scale-95 transition-all duration-150 sm:hidden"
+      >
+        {contacts.phone}
+      </a>
+    </nav>
+  </div>
+</header>
+
+<!-- JavaScript для работы бургер-меню -->
+<script>
+  const burgerBtn = document.getElementById('burger-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+
+  // Открытие/закрытие меню по клику на бургер
+  burgerBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  // Закрытие меню при клике на ссылку
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+  });
+</script>
