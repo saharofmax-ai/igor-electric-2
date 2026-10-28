@@ -1,7 +1,5 @@
 ---
-// Импортируем данные
 import { contacts } from '../data/contacts.js';
-import { site } from '../data/site.js';
 ---
 
 <section id="contacts" class="py-16 md:py-24 bg-gray-50">
@@ -82,14 +80,12 @@ import { site } from '../data/site.js';
         </div>
       </div>
 
-      <!-- Правая колонка: Форма заявки (настроена для Netlify Forms) -->
+      <!-- Правая колонка: Форма заявки -->
       <div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100">
         <h3 class="text-xl font-bold text-gray-900 mb-6">Оставить заявку</h3>
         
-        <!-- Атрибуты name="contact" и netlify обязательны для работы -->
-        <form name="contact" netlify method="POST" action="/success" class="space-y-4">
-          
-          <!-- Скрытое поле, чтобы Netlify увидел форму при сборке сайта -->
+        <!-- Форма -->
+        <form name="contact" netlify method="POST" class="space-y-4" id="contact-form">
           <input type="hidden" name="form-name" value="contact" />
 
           <div>
@@ -127,6 +123,7 @@ import { site } from '../data/site.js';
 
           <button 
             type="submit" 
+            id="submit-btn"
             class="w-full bg-blue-700 text-white py-3 rounded-lg font-semibold hover:bg-blue-800 active:bg-blue-900 active:scale-95 transition-all duration-150 shadow-lg"
           >
             Отправить заявку
@@ -136,9 +133,83 @@ import { site } from '../data/site.js';
             Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
           </p>
         </form>
+
+        <!-- Сообщение об успехе (скрыто по умолчанию) -->
+        <div id="success-message" class="hidden text-center py-8">
+          <div class="mb-6">
+            <div class="inline-flex items-center justify-center w-20 h-20 bg-green-100 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+          </div>
+          <h4 class="text-2xl font-bold text-gray-900 mb-3">Спасибо за заявку!</h4>
+          <p class="text-gray-600 mb-6">
+            Ваша заявка отправлена. Я перезвоню вам в течение 15 минут.
+          </p>
+          <button 
+            type="button"
+            id="reset-btn"
+            class="bg-blue-700 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-800 transition-colors"
+          >
+            Отправить ещё одну заявку
+          </button>
+        </div>
+
       </div>
 
     </div>
 
   </div>
 </section>
+
+<script is:inline>
+  const form = document.getElementById('contact-form');
+  const successMessage = document.getElementById('success-message');
+  const resetBtn = document.getElementById('reset-btn');
+  const submitBtn = document.getElementById('submit-btn');
+
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    
+    // Блокируем кнопку на время отправки
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Отправка...';
+    
+    try {
+      // Собираем данные формы
+      const formData = new FormData(form);
+      
+      // Отправляем на Netlify Forms
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      });
+      
+      if (response.ok) {
+        // Скрываем форму, показываем сообщение об успехе
+        form.classList.add('hidden');
+        successMessage.classList.remove('hidden');
+      } else {
+        alert('Произошла ошибка при отправке. Пожалуйста, позвоните напрямую.');
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Отправить заявку';
+      }
+    } catch (error) {
+      alert('Ошибка соединения. Пожалуйста, позвоните напрямую.');
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Отправить заявку';
+    }
+  });
+
+  // Кнопка "Отправить ещё одну заявку"
+  resetBtn.addEventListener('click', function() {
+    form.reset();
+    successMessage.classList.add('hidden');
+    form.classList.remove('hidden');
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Отправить заявку';
+  });
+</script>
