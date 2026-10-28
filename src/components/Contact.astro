@@ -181,23 +181,36 @@ import { contacts } from '../data/contacts.js';
       // Собираем данные формы
       const formData = new FormData(form);
       
+      // Формируем тело запроса явно
+      const body = new URLSearchParams({
+        'form-name': 'contact',
+        name: formData.get('name'),
+        phone: formData.get('phone'),
+        message: formData.get('message')
+      }).toString();
+      
       // Отправляем на Netlify Forms
       const response = await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(formData).toString()
+        body: body
       });
+      
+      console.log('Status:', response.status);
       
       if (response.ok) {
         // Скрываем форму, показываем сообщение об успехе
         form.classList.add('hidden');
         successMessage.classList.remove('hidden');
       } else {
-        alert('Произошла ошибка при отправке. Пожалуйста, позвоните напрямую.');
+        const errorText = await response.text();
+        console.log('Error:', errorText);
+        alert('Ошибка ' + response.status + '. Пожалуйста, позвоните напрямую.');
         submitBtn.disabled = false;
         submitBtn.textContent = 'Отправить заявку';
       }
     } catch (error) {
+      console.log('Fetch error:', error);
       alert('Ошибка соединения. Пожалуйста, позвоните напрямую.');
       submitBtn.disabled = false;
       submitBtn.textContent = 'Отправить заявку';
