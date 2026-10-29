@@ -2,14 +2,14 @@
 import { site } from '../data/site.js';
 ---
 
-<section id="about" class="py-16 md:py-24 bg-white">
+<section id="about" class="py-10 md:py-16 bg-white">
   <div class="max-w-6xl mx-auto px-4">
     
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-center">
       
       <!-- Левая колонка: Фото мастера -->
-      <div class="relative">
-        <div class="aspect-[4/5] rounded-2xl bg-gray-100 overflow-hidden shadow-lg border border-gray-200">
+      <div class="relative max-w-sm md:max-w-md mx-auto w-full">
+        <div class="aspect-[3/4] rounded-2xl bg-gray-100 overflow-hidden shadow-lg border border-gray-200">
           <img 
             src="/images/about.jpg" 
             alt="Электрик Игорь Семёнов" 
@@ -18,53 +18,53 @@ import { site } from '../data/site.js';
         </div>
         
         <!-- Бейдж с опытом -->
-        <div class="absolute -bottom-6 -right-6 bg-blue-700 text-white p-6 rounded-xl shadow-xl hidden md:block">
-          <div class="text-4xl font-extrabold">25</div>
-          <div class="text-sm font-medium opacity-90">лет опыта</div>
+        <div class="absolute -bottom-4 -right-4 bg-blue-700 text-white p-4 rounded-xl shadow-xl hidden md:block">
+          <div class="text-3xl font-extrabold">25</div>
+          <div class="text-xs font-medium opacity-90">лет опыта</div>
         </div>
       </div>
 
       <!-- Правая колонка: Текст -->
       <div>
-        <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
+        <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-4">
           Обо мне
         </h2>
-        <p class="text-base text-gray-700 mb-5 leading-relaxed">
+        <p class="text-sm md:text-base text-gray-700 mb-3 leading-relaxed">
           Меня зовут Игорь. Я профессиональный электрик, и моя главная цель — сделать вашу электросеть безопасной, надёжной и удобной. Я не просто "чиню розетки", я проектирую и монтирую системы, которые служат десятилетиями.
         </p>
-        <p class="text-base text-gray-700 mb-8 leading-relaxed">
+        <p class="text-sm md:text-base text-gray-700 mb-5 leading-relaxed">
           Работаю без посредников, поэтому лично отвечаю за каждый метр проложенного кабеля и каждый установленный автомат. 
         </p>
 
         <!-- Список преимуществ -->
-        <ul class="space-y-4">
+        <ul class="space-y-3">
           <li class="flex items-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B5ED7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B5ED7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
               <polyline points="22 4 12 14.01 9 11.01"/>
             </svg>
-            <span class="text-gray-700">Использую только качественные, сертифицированные материалы (ГОСТ).</span>
+            <span class="text-sm md:text-base text-gray-700">Использую только качественные, сертифицированные материалы (ГОСТ).</span>
           </li>
           <li class="flex items-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B5ED7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B5ED7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
               <polyline points="22 4 12 14.01 9 11.01"/>
             </svg>
-            <span class="text-gray-700">Предоставляю гарантию на работы сроком от 3 лет до пожизненной — в зависимости от типа объекта и вида работ.</span>
+            <span class="text-sm md:text-base text-gray-700">Предоставляю гарантию на работы сроком от 3 лет до пожизненной.</span>
           </li>
           <li class="flex items-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B5ED7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B5ED7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
               <polyline points="22 4 12 14.01 9 11.01"/>
             </svg>
-            <span class="text-gray-700">Всегда убираю за собой строительный мусор после завершения монтажа.</span>
+            <span class="text-sm md:text-base text-gray-700">Всегда убираю за собой строительный мусор после завершения монтажа.</span>
           </li>
           <li class="flex items-start gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B5ED7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B5ED7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5">
               <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
               <polyline points="22 4 12 14.01 9 11.01"/>
             </svg>
-            <span class="text-gray-700">Смета фиксируется до начала работ, без скрытых доплат.</span>
+            <span class="text-sm md:text-base text-gray-700">Смета фиксируется до начала работ, без скрытых доплат.</span>
           </li>
         </ul>
 
@@ -75,22 +75,22 @@ import { site } from '../data/site.js';
 </section>
 
 <!-- Новая секция: Квалификация и допуски -->
-<section class="py-16 md:py-24 bg-gray-50">
+<section class="py-10 md:py-16 bg-gray-50">
   <div class="max-w-6xl mx-auto px-4">
     
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+    <div class="text-center mb-8">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">
         Квалификация и допуски
       </h2>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-        Все работы выполняются в соответствии с нормами электробезопасности
+      <p class="text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
+        Все работы выполняются в строгом соответствии с нормами электробезопасности
       </p>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-center">
       
       <!-- Левая колонка: Удостоверение -->
-      <div class="bg-white p-6 rounded-2xl shadow-lg border border-gray-100">
+      <div class="bg-white p-4 md:p-6 rounded-2xl shadow-lg border border-gray-100 max-w-sm md:max-w-md mx-auto w-full">
         <div class="aspect-[4/3] rounded-lg overflow-hidden bg-gray-100">
           <img 
             src="/images/certificate.jpg" 
@@ -102,41 +102,41 @@ import { site } from '../data/site.js';
 
       <!-- Правая колонка: Описание -->
       <div>
-        <div class="space-y-6">
+        <div class="space-y-4">
           
           <div class="flex items-start gap-4">
-            <div class="flex-shrink-0 bg-blue-100 p-3 rounded-lg">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0B5ED7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <div class="flex-shrink-0 bg-blue-100 p-2.5 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B5ED7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
                 <path d="m9 12 2 2 4-4"/>
               </svg>
             </div>
             <div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">IV группа электробезопасности</h3>
-              <p class="text-gray-700 leading-relaxed">
-                Допуск к работам в электроустановках напряжением до 1000В. Действительно до 19.09.2024.
+              <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-1">IV группа электробезопасности</h3>
+              <p class="text-sm md:text-base text-gray-700 leading-relaxed">
+                Допуск к работам в электроустановках напряжением до 1000В.
               </p>
             </div>
           </div>
 
           <div class="flex items-start gap-4">
-            <div class="flex-shrink-0 bg-blue-100 p-3 rounded-lg">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0B5ED7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <div class="flex-shrink-0 bg-blue-100 p-2.5 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B5ED7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <rect width="20" height="14" x="2" y="5" rx="2"/>
                 <line x1="2" x2="22" y1="10" y2="10"/>
               </svg>
             </div>
             <div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">Официальная квалификация</h3>
-              <p class="text-gray-700 leading-relaxed">
-                Удостоверение выдано Национальной академией развития информационных технологий. Регистрационный номер 24/3523ПК.
+              <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-1">Официальная квалификация</h3>
+              <p class="text-sm md:text-base text-gray-700 leading-relaxed">
+                Удостоверение выдано Национальной академией развития информационных технологий. Рег. номер 24/3523ПК.
               </p>
             </div>
           </div>
 
           <div class="flex items-start gap-4">
-            <div class="flex-shrink-0 bg-blue-100 p-3 rounded-lg">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0B5ED7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <div class="flex-shrink-0 bg-blue-100 p-2.5 rounded-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0B5ED7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
                 <polyline points="14 2 14 8 20 8"/>
                 <line x1="16" x2="8" y1="13" y2="13"/>
@@ -145,8 +145,8 @@ import { site } from '../data/site.js';
               </svg>
             </div>
             <div>
-              <h3 class="text-xl font-bold text-gray-900 mb-2">Соблюдение норм ПУЭ</h3>
-              <p class="text-gray-700 leading-relaxed">
+              <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-1">Соблюдение норм ПУЭ</h3>
+              <p class="text-sm md:text-base text-gray-700 leading-relaxed">
                 Все работы выполняются в соответствии с Правилами устройства электроустановок и правилами техники безопасности.
               </p>
             </div>
