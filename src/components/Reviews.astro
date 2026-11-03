@@ -1,17 +1,66 @@
 ---
-// Импортируем данные об отзывах
-import { reviews } from '../data/reviews.js';
+// Данные отзывов
+const reviews = [
+  {
+    name: "Елена Васильевна",
+    location: "частный дом, Михнево",
+    date: "20.03.2026",
+    rating: 5,
+    text: "Игорь собирал электрощит в нашем доме и предложил установить реле защиты от скачков напряжения. Мы даже не знали, что такая штука существует! Объяснил, что защищает дорогую технику — холодильник, телевизор, котёл. Установил всё аккуратно, в щите порядок идеальный. Пока ни одного сбоя. Очень качественно!"
+  },
+  {
+    name: "Дмитрий Соколов",
+    location: "замена проводки, Ступино",
+    date: "16.02.2026",
+    rating: 5,
+    text: "Делали полную замену проводки в двухкомнатной квартире. Работа заняла 8 дней. Всё чисто, по смете, без переплат. Щиток собрал как произведение искусства — все автоматы подписаны, провода аккуратно уложены. Профессионал своего дела!"
+  },
+  {
+    name: "Анна Петрова",
+    location: "аварийный вызов, д. Сидорово",
+    date: "15.09.2025",
+    rating: 4,
+    text: "Игорь приехал в день обращения, быстро нашёл причину короткого замыкания и всё устранил. Очень аккуратный и вежливый мастер. Единственное — договорились на 14 часов, но он позвонил и перенёс на 18 часов. Понимаю, что были срочные заказы, но всё же пришлось подождать. В остальном — рекомендую!"
+  },
+  {
+    name: "Нина Михайловна",
+    location: "монтаж освещения, посёлок Усады",
+    date: "20.04.2026",
+    rating: 5,
+    text: "Установили 12 точечных светильников и люстру в гостиной. Игорь помог с выбором места расположения, всё работает идеально. Спасибо!"
+  },
+  {
+    name: "Ольга Новикова",
+    location: "розетки и выключатели, СНТ «Наука»",
+    date: "18.08.2026",
+    rating: 4,
+    text: "Переносили розетки на кухне под новую мебель. Сделано быстро, без пыли. Цена приемлемая. Буду обращаться ещё. Из пожеланий — хотелось бы, чтобы после работы сам вынес мусор, пришлось убирать самой. Но в целом всё отлично!"
+  }
+];
+
+// Функция для отрисовки звёзд
+function renderStars(rating: number) {
+  let stars = '';
+  for (let i = 1; i <= 5; i++) {
+    if (i <= rating) {
+      stars += `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#FBBF24" stroke="#FBBF24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
+    } else {
+      stars += `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D1D5DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`;
+    }
+  }
+  return stars;
+}
 ---
 
-<section id="reviews" class="py-16 md:py-24 bg-white">
+<section class="py-10 md:py-16 bg-white">
   <div class="max-w-6xl mx-auto px-4">
     
     <!-- Заголовок секции -->
-    <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-3">
         Отзывы клиентов
       </h2>
-      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+      <p class="text-sm md:text-base text-gray-600 max-w-2xl mx-auto">
         Мне доверяют жители Михнево и Ступинского района. Вот что они говорят о моей работе.
       </p>
     </div>
@@ -19,26 +68,21 @@ import { reviews } from '../data/reviews.js';
     <!-- Сетка отзывов -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {reviews.map((review) => (
-        <div class="bg-gray-50 p-6 rounded-lg border border-gray-100 flex flex-col">
+        <div class="bg-gray-50 p-6 rounded-2xl border border-gray-100 flex flex-col h-full">
           
-          <!-- Звёзды рейтинга -->
-          <div class="flex gap-1 mb-3">
-            {Array.from({ length: review.rating }).map(() => (
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="#FFB703" stroke="#FFB703" stroke-width="1">
-                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
-              </svg>
-            ))}
-          </div>
-
+          <!-- Звёзды -->
+          <div class="flex gap-1 mb-4" set:html={renderStars(review.rating)}></div>
+          
           <!-- Текст отзыва -->
-          <p class="text-gray-700 text-sm leading-relaxed mb-4 flex-1">
+          <p class="text-sm md:text-base text-gray-700 leading-relaxed mb-6 flex-grow italic">
             "{review.text}"
           </p>
-
-          <!-- Имя клиента и вид работ -->
-          <div class="border-t border-gray-200 pt-3">
+          
+          <!-- Автор и дата -->
+          <div class="mt-auto pt-4 border-t border-gray-200">
             <div class="font-bold text-gray-900 text-sm">{review.name}</div>
-            <div class="text-xs text-gray-500 mt-1">{review.work} · {review.date}</div>
+            <div class="text-xs text-gray-500 mt-1">{review.location}</div>
+            <div class="text-xs text-gray-400 mt-1">{review.date}</div>
           </div>
 
         </div>

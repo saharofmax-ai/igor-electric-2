@@ -14,8 +14,8 @@ interface Props {
 }
 
 const { 
-  title = 'Электрик Игорь — электромонтаж в Москве и ближнем Подмосковье',
-  description = 'Профессиональный электромонтаж в Москве и ближнем Подмосковье. 25 лет опыта. Гарантия качества. Выезд в день обращения. Аварийный вызов 24/7.'
+  title = 'Электрик в Михнево и Ступино | Проводка, щиты, аудит проекта | 4 группа допуска',
+  description = 'Профессиональный электромонтаж в Михнево и Ступинском районе. Работаю в частном секторе, СНТ и на дачах. 25 лет опыта. Гарантия качества. Выезд в день обращения. Аварийный вызов 24/7.'
 } = Astro.props;
 ---
 
@@ -42,6 +42,34 @@ const {
         font-size: 85%;
       }
     </style>
+
+    <!-- Микроразметка Schema.org для локального бизнеса -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Electrician",
+      "name": "Электрик Игорь — Михнево и Ступинский район",
+      "url": "https://electric-mihnevo-msk.netlify.app/",
+      "telephone": "+79995567891",
+      "priceRange": "от 500 ₽",
+      "description": "Профессиональный электрик с 4 группой допуска. Электромонтаж, замена проводки, сборка щитов, аудит электропроектов. Выезд по Михнево, Ступино и Ступинскому району.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Михнево",
+        "addressRegion": "Московская область",
+        "addressCountry": "RU"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Михнево" },
+        { "@type": "City", "name": "Ступино" },
+        { "@type": "AdministrativeArea", "name": "Ступинский район" }
+      ],
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "09:00",
+        "closes": "20:00"
+      }
+    })} />
   </head>
   <body>
     <!-- Шапка сайта -->
