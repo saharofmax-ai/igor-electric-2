@@ -28,13 +28,56 @@ const iconMap = {
 
     <!-- Сетка карточек услуг -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {services.map((service) => (
-        <div class="bg-gray-50 p-6 rounded-lg border border-gray-100 hover:shadow-md transition-shadow">
-          <div class="mb-4" set:html={iconMap[service.icon] || iconMap.cable}></div>
-          <h3 class="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">{service.description}</p>
-        </div>
-      ))}
+      {services.map((service) => {
+        // Проверяем, является ли услуга аудитом (по иконке inspection)
+        const isAudit = service.icon === 'inspection';
+        
+        return (
+          <div class={`p-6 rounded-xl border transition-all duration-300 flex flex-col h-full ${
+            isAudit 
+              ? 'bg-blue-50 border-blue-200 hover:shadow-lg hover:border-blue-300' 
+              : 'bg-gray-50 border-gray-100 hover:shadow-md'
+          }`}>
+            
+            {/* Бейдж только для аудита */}
+            {isAudit && (
+              <span class="inline-block bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-4 w-fit">
+                Уникальная услуга
+              </span>
+            )}
+
+            <div class="mb-4" set:html={iconMap[service.icon] || iconMap.cable}></div>
+            
+            <h3 class={`text-xl font-bold mb-2 ${isAudit ? 'text-blue-900' : 'text-gray-900'}`}>
+              {service.title}
+            </h3>
+            
+            <p class="text-gray-600 text-sm leading-relaxed mb-6 flex-grow">
+              {service.description}
+            </p>
+            
+            {/* Разные ссылки и стили кнопок для аудита и остальных услуг */}
+            {isAudit ? (
+              <a 
+                href="/audit" 
+                class="inline-flex items-center gap-2 text-blue-700 font-semibold hover:text-blue-800 text-sm group"
+              >
+                Узнать подробнее и заказать проверку
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            ) : (
+              <a 
+                href="#contacts" 
+                class="inline-flex items-center gap-2 text-gray-500 font-medium hover:text-blue-700 text-sm group"
+              >
+                Заказать услугу
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="group-hover:translate-x-1 transition-transform"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              </a>
+            )}
+            
+          </div>
+        );
+      })}
     </div>
 
   </div>
