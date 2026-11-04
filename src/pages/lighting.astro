@@ -1,0 +1,310 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Contact from '../components/Contact.astro';
+---
+
+<BaseLayout 
+  title="Монтаж освещения в Михнево и Ступино | Люстры, LED-ленты, трековые системы | Электрик Игорь"
+  description="Профессиональный монтаж освещения: люстры, точечные светильники, LED-ленты, трековые системы. Проходные выключатели, мастер-выключатель, датчики движения. Выезд по Михнево, Ступино и Ступинскому району."
+>
+
+<!-- Первый экран -->
+<section class="py-12 md:py-16 bg-gradient-to-br from-blue-50 to-white">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 bg-blue-100 text-blue-800 px-4 py-1.5 rounded-full text-sm font-semibold mb-5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M12 2v1"/><path d="M12 7a5 5 0 1 0 5 5c0-2-1-3.5-2-5s-2-3-3-5"/></svg>
+        Люстры, LED, треки, автоматика
+      </div>
+      
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
+        Монтаж освещения <span class="text-blue-700">в Михнево и Ступино</span>
+      </h1>
+      
+      <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+        Не просто «повесить люстру». Правильно рассчитаю мощность, подключу LED-ленту с двух сторон, сделаю управление светом из нескольких мест, установлю датчики и мастер-выключатель.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="tel:+79995567891" class="inline-flex items-center justify-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-blue-800 transition-colors shadow-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Позвонить: +7 (999) 556-78-91
+        </a>
+        <a href="#contacts" class="inline-flex items-center justify-center gap-2 bg-white text-blue-700 border-2 border-blue-700 px-6 py-3 rounded-lg text-base font-semibold hover:bg-blue-50 transition-colors">
+          Рассчитать стоимость
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Проблема -->
+<section class="py-10 md:py-14 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">
+        Частые ошибки при монтаже освещения
+      </h2>
+      
+      <p class="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
+        Кажется, что освещение — это просто. Но именно здесь чаще всего возникают проблемы, которые дорого исправлять после чистовой отделки.
+      </p>
+      
+      <ul class="space-y-4">
+        <li class="flex items-start gap-3 bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          <span class="text-gray-800"><strong>LED-лента подключена с одного конца</strong> — к концу ленты не хватает напряжения, свечение тускнеет. Правильно — питание с двух сторон</span>
+        </li>
+        <li class="flex items-start gap-3 bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          <span class="text-gray-800"><strong>Слишком мощный блок питания для LED</strong> — блок греется, быстро выходит из строя. Нужен запас по мощности 20–30%</span>
+        </li>
+        <li class="flex items-start gap-3 bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          <span class="text-gray-800"><strong>Нет управления светом из нескольких мест</strong> — приходится идти через всю комнату, чтобы выключить свет у кровати</span>
+        </li>
+        <li class="flex items-start gap-3 bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          <span class="text-gray-800"><strong>Трековые светильники установлены без учёта нагрузки</strong> — перегрев шины, мерцание, выход из строя драйверов</span>
+        </li>
+      </ul>
+      
+      <div class="mt-8 p-5 bg-yellow-50 border border-yellow-200 rounded-lg">
+        <p class="text-gray-800 font-medium">
+          ⚠️ В итоге: тусклый свет, перегорающие блоки, неудобное управление. Переделка после чистового ремонта = испорченные стены и потолки.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Решение -->
+<section class="py-10 md:py-14 bg-blue-50">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">
+        Что я делаю правильно
+      </h2>
+      
+      <div class="space-y-4">
+        <div class="flex items-start gap-4 bg-white p-5 rounded-lg shadow-sm">
+          <div class="flex-shrink-0 bg-green-100 p-2.5 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">✅ LED-лента с питанием с двух сторон</h3>
+            <p class="text-gray-700">Равномерное свечение по всей длине. Правильный расчёт блока питания с запасом 20–30%. Скрытый монтаж в нишах и за карнизами</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start gap-4 bg-white p-5 rounded-lg shadow-sm">
+          <div class="flex-shrink-0 bg-green-100 p-2.5 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">✅ Управление светом из нескольких мест</h3>
+            <p class="text-gray-700">Проходные и перекрёстные выключатели. Включили свет у двери — выключили у кровати. Удобно в спальнях, коридорах, на лестницах</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start gap-4 bg-white p-5 rounded-lg shadow-sm">
+          <div class="flex-shrink-0 bg-green-100 p-2.5 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">✅ Мастер-выключатель</h3>
+            <p class="text-gray-700">Одной кнопкой у входной двери обесточиваете весь свет в доме. Удобно и безопасно — уезжая, не бегаете по комнатам</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start gap-4 bg-white p-5 rounded-lg shadow-sm">
+          <div class="flex-shrink-0 bg-green-100 p-2.5 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">✅ Автоматика: реле, датчики, таймеры</h3>
+            <p class="text-gray-700">Реле времени для подсветки лестниц, датчики движения для коридоров и санузлов, фотореле для уличного освещения</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Что входит -->
+<section class="py-10 md:py-14 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-8 text-center">
+        Виды работ по освещению
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="border border-gray-200 rounded-lg p-5 hover:border-blue-300 transition-colors">
+          <h3 class="font-bold text-gray-900 mb-2">💡 Люстры и подвесные светильники</h3>
+          <p class="text-sm text-gray-700">Монтаж на крюк или планку, подключение, проверка надёжности крепления</p>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-5 hover:border-blue-300 transition-colors">
+          <h3 class="font-bold text-gray-900 mb-2">🔆 Точечные светильники и споты</h3>
+          <p class="text-sm text-gray-700">Врезка в гипсокартон или натяжной потолок, подключение к трансформатору или напрямую</p>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-5 hover:border-blue-300 transition-colors">
+          <h3 class="font-bold text-gray-900 mb-2">✨ LED-ленты и подсветка</h3>
+          <p class="text-sm text-gray-700">Ниши, карнизы, лестницы, зеркала, рабочая зона кухни. Питание с двух сторон, диммеры, RGB-контроллеры</p>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-5 hover:border-blue-300 transition-colors">
+          <h3 class="font-bold text-gray-900 mb-2">🛤️ Трековые системы</h3>
+          <p class="text-sm text-gray-700">Монтаж шины, подключение светильников, расчёт нагрузки на линию</p>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-5 hover:border-blue-300 transition-colors">
+          <h3 class="font-bold text-gray-900 mb-2">🔄 Проходные выключатели</h3>
+          <p class="text-sm text-gray-700">Управление светом из 2, 3 и более мест. Правильная схема без «глюков»</p>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-5 hover:border-blue-300 transition-colors">
+          <h3 class="font-bold text-gray-900 mb-2">⚙️ Автоматика и умный свет</h3>
+          <p class="text-sm text-gray-700">Мастер-выключатель, реле времени, датчики движения, фотореле, диммеры</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Стоимость -->
+<section class="py-10 md:py-14 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">
+        Стоимость монтажа освещения
+      </h2>
+      
+      <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+        <div class="text-5xl font-extrabold text-blue-700 mb-3">от 500 ₽</div>
+        <p class="text-gray-600 mb-6">За точку. Точная цена зависит от типа светильника и сложности монтажа</p>
+        
+        <div class="space-y-3 text-left mb-6">
+          <div class="flex items-center justify-between border-b border-gray-100 pb-2">
+            <span class="text-gray-700">Установка люстры</span>
+            <span class="font-bold text-gray-900">от 1 500 ₽</span>
+          </div>
+          <div class="flex items-center justify-between border-b border-gray-100 pb-2">
+            <span class="text-gray-700">Точечный светильник</span>
+            <span class="font-bold text-gray-900">от 500 ₽</span>
+          </div>
+          <div class="flex items-center justify-between border-b border-gray-100 pb-2">
+            <span class="text-gray-700">LED-лента с монтажом (за метр)</span>
+            <span class="font-bold text-gray-900">от 400 ₽/м</span>
+          </div>
+          <div class="flex items-center justify-between border-b border-gray-100 pb-2">
+            <span class="text-gray-700">Трековый светильник</span>
+            <span class="font-bold text-gray-900">от 800 ₽</span>
+          </div>
+          <div class="flex items-center justify-between border-b border-gray-100 pb-2">
+            <span class="text-gray-700">Проходной выключатель</span>
+            <span class="font-bold text-gray-900">от 800 ₽</span>
+          </div>
+          <div class="flex items-center justify-between border-b border-gray-100 pb-2">
+            <span class="text-gray-700">Мастер-выключатель</span>
+            <span class="font-bold text-gray-900">от 2 500 ₽</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <span class="text-gray-700">Датчик движения / фотореле</span>
+            <span class="font-bold text-gray-900">от 1 200 ₽</span>
+          </div>
+        </div>
+        
+        <div class="p-4 bg-green-50 rounded-lg border border-green-200">
+          <p class="text-gray-800 font-medium">
+            💡 При монтаже освещения во всей квартире или доме — скидка на объём. Светильники и материалы оплачиваются отдельно или покупаются вами по моему списку.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Для кого -->
+<section class="py-10 md:py-14 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-8 text-center">
+        Кому нужен монтаж освещения
+      </h2>
+      
+      <div class="space-y-4">
+        <div class="flex items-start gap-4 p-5 bg-gray-50 rounded-lg">
+          <div class="flex-shrink-0 bg-blue-100 p-2 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">При новом ремонте</h3>
+            <p class="text-gray-700">Правильно спроектировать и смонтировать освещение до чистовой отделки</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start gap-4 p-5 bg-gray-50 rounded-lg">
+          <div class="flex-shrink-0 bg-blue-100 p-2 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Для современного интерьера</h3>
+            <p class="text-gray-700">LED-подсветка, треки, скрытый свет — всё, что делает интерьер дорогим и уютным</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start gap-4 p-5 bg-gray-50 rounded-lg">
+          <div class="flex-shrink-0 bg-blue-100 p-2 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Для удобства и безопасности</h3>
+            <p class="text-gray-700">Проходные выключатели, подсветка лестниц, датчики движения в коридорах и санузлах</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start gap-4 p-5 bg-gray-50 rounded-lg">
+          <div class="flex-shrink-0 bg-blue-100 p-2 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Для уличного освещения</h3>
+            <p class="text-gray-700">Фотореле, датчики движения, подсветка фасада и участка с автоматическим включением</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Форма связи -->
+<section id="contacts" class="py-10 md:py-14 bg-blue-50">
+  <Contact />
+</section>
+
+<!-- Назад к услугам -->
+<section class="py-8 bg-white border-t border-gray-200">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <a href="/" class="inline-flex items-center gap-2 text-blue-700 font-semibold hover:text-blue-800">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Вернуться на главную
+    </a>
+  </div>
+</section>
+
+</BaseLayout>

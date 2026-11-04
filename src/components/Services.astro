@@ -36,6 +36,7 @@ const arrowIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16
         const isWiring = service.icon === 'cable';
         const isPanel = service.icon === 'panel';
         const isEmergency = service.icon === 'emergency';
+        const isLight = service.icon === 'light';
         
         return (
           <div class={`p-6 rounded-xl border transition-all duration-300 flex flex-col h-full ${
@@ -86,6 +87,11 @@ const arrowIcon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16
               ) : isEmergency ? (
                 <a href="/emergency" class="inline-flex items-center gap-2 text-red-700 font-semibold hover:text-red-800 text-sm group">
                   Вызвать электрика срочно
+                  <span set:html={arrowIcon}></span>
+                </a>
+              ) : isLight ? (
+                <a href="/lighting" class="inline-flex items-center gap-2 text-blue-700 font-semibold hover:text-blue-800 text-sm group">
+                  Подробнее о монтаже освещения
                   <span set:html={arrowIcon}></span>
                 </a>
               ) : (
