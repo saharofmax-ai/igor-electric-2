@@ -1,0 +1,268 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Contact from '../components/Contact.astro';
+---
+
+<BaseLayout 
+  title="Сборка электрощитов в Михнево и Ступино | Электрик Игорь | 4 группа допуска"
+  description="Профессиональная сборка и монтаж электрощитов в частных домах и квартирах. Автоматы, УЗО, реле напряжения, аккуратная маркировка. Выезд по Михнево, Ступино и Ступинскому району. От 5 000 ₽."
+>
+
+<!-- Первый экран -->
+<section class="py-12 md:py-16 bg-gradient-to-br from-blue-50 to-white">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 bg-blue-100 text-blue-800 px-4 py-1.5 rounded-full text-sm font-semibold mb-5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+        Квартирные и трёхфазные щиты
+      </div>
+      
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
+        Сборка и монтаж электрощитов <span class="text-blue-700">в Михнево и Ступино</span>
+      </h1>
+      
+      <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+        Надёжный щит — это безопасность вашего дома. Собираю щиты любой сложности: от квартирных до трёхфазных для коттеджей. Только проверенные комплектующие, аккуратный монтаж и полная маркировка линий.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="tel:+79995567891" class="inline-flex items-center justify-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-blue-800 transition-colors shadow-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Позвонить: +7 (999) 556-78-91
+        </a>
+        <a href="#contacts" class="inline-flex items-center justify-center gap-2 bg-white text-blue-700 border-2 border-blue-700 px-6 py-3 rounded-lg text-base font-semibold hover:bg-blue-50 transition-colors">
+          Рассчитать стоимость
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Проблема -->
+<section class="py-10 md:py-14 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">
+        Чем опасен плохо собранный щит
+      </h2>
+      
+      <p class="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
+        Электрощит — это «мозг» вашей электрики. Если он собран на «скрутках», без УЗО или с неправильно подобранными автоматами, последствия могут быть фатальными.
+      </p>
+      
+      <ul class="space-y-4">
+        <li class="flex items-start gap-3 bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          <span class="text-gray-800"><strong>Искры и запах гари</strong> — плохой контакт на клеммах приводит к нагреву, оплавлению изоляции и короткому замыканию</span>
+        </li>
+        <li class="flex items-start gap-3 bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          <span class="text-gray-800"><strong>Выбивает автомат при включении чайника</strong> — неправильно подобраны номиналы или нарушена селективность защиты</span>
+        </li>
+        <li class="flex items-start gap-3 bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          <span class="text-gray-800"><strong>Нет защиты от утечек и скачков</strong> — отсутствие УЗО и реле напряжения рискует жизнью людей и сгоранием дорогой техники</span>
+        </li>
+      </ul>
+      
+      <div class="mt-8 p-5 bg-yellow-50 border border-yellow-200 rounded-lg">
+        <p class="text-gray-800 font-medium">
+          ⚠️ В итоге: постоянные отключения света, риск пожара и необходимость полной переборки щита через год.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Решение -->
+<section class="py-10 md:py-14 bg-blue-50">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">
+        Как я собираю щиты
+      </h2>
+      
+      <p class="text-base md:text-lg text-gray-700 mb-8 leading-relaxed">
+        Работаю строго по ПУЭ. Никаких «скруток» — только опрессовка гильзами или профессиональные клеммы. Каждый щит проходит тестирование перед сдачей.
+      </p>
+      
+      <div class="space-y-4">
+        <div class="flex items-start gap-4 bg-white p-5 rounded-lg shadow-sm">
+          <div class="flex-shrink-0 bg-green-100 p-2.5 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">✅ Правильная схемотехника</h3>
+            <p class="text-gray-700">Разделение на группы (свет, розетки, мощные приборы), установка УЗО на мокрые зоны, реле напряжения на весь дом</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start gap-4 bg-white p-5 rounded-lg shadow-sm">
+          <div class="flex-shrink-0 bg-green-100 p-2.5 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">✅ Аккуратный монтаж</h3>
+            <p class="text-gray-700">Использование гребёнок, правильная укладка проводов, отсутствие натяжения на клеммах. Щит выглядит идеально</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start gap-4 bg-white p-5 rounded-lg shadow-sm">
+          <div class="flex-shrink-0 bg-green-100 p-2.5 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">✅ Полная маркировка</h3>
+            <p class="text-gray-700">Каждый автомат подписан. Вы всегда будете знать, какой рубильник отвечает за кухню, а какой — за стиральную машину</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Что входит -->
+<section class="py-10 md:py-14 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-8 text-center">
+        Что входит в сборку щита
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="border border-gray-200 rounded-lg p-5 hover:border-blue-300 transition-colors">
+          <h3 class="font-bold text-gray-900 mb-2">📐 Разработка схемы</h3>
+          <p class="text-sm text-gray-700">Расчёт нагрузок, подбор номиналов автоматов и УЗО, составление однолинейной схемы</p>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-5 hover:border-blue-300 transition-colors">
+          <h3 class="font-bold text-gray-900 mb-2"> Подбор комплектующих</h3>
+          <p class="text-sm text-gray-700">Помогу выбрать качественные автоматы (ABB, Schneider, IEK) под ваш бюджет без переплат</p>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-5 hover:border-blue-300 transition-colors">
+          <h3 class="font-bold text-gray-900 mb-2">🔧 Сборка и монтаж</h3>
+          <p class="text-sm text-gray-700">Установка на DIN-рейку, подключение гребёнками, опрессовка наконечниками, укладка проводов</p>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-5 hover:border-blue-300 transition-colors">
+          <h3 class="font-bold text-gray-900 mb-2">🏷️ Маркировка и тест</h3>
+          <p class="text-sm text-gray-700">Подпись всех линий, проверка напряжения, тестирование УЗО и автоматов перед сдачей</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Стоимость -->
+<section class="py-10 md:py-14 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">
+        Стоимость сборки щита
+      </h2>
+      
+      <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+        <div class="text-5xl font-extrabold text-blue-700 mb-3">от 5 000 ₽</div>
+        <p class="text-gray-600 mb-6">Только за работу. Комплектующие (автоматы, корпус, шины) оплачиваются отдельно</p>
+        
+        <div class="space-y-3 text-left mb-6">
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-gray-700">Квартирный щит (до 12 модулей) — от 5 000 ₽</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-gray-700">Щит для частного дома (до 24 модулей) — от 8 000 ₽</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-gray-700">Трёхфазный щит / щит учёта (от 36 модулей) — от 12 000 ₽</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-gray-700">Модернизация старого щита (замена автоматов, добавление УЗО) — от 3 000 ₽</span>
+          </div>
+        </div>
+        
+        <div class="p-4 bg-green-50 rounded-lg border border-green-200">
+          <p class="text-gray-800 font-medium">
+            💡 Могу собрать щит у себя в мастерской и привезти готовым, или собрать на объекте — как вам удобнее.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Для кого -->
+<section class="py-10 md:py-14 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-8 text-center">
+        Кому нужна сборка щита
+      </h2>
+      
+      <div class="space-y-4">
+        <div class="flex items-start gap-4 p-5 bg-gray-50 rounded-lg">
+          <div class="flex-shrink-0 bg-blue-100 p-2 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">При новом строительстве или ремонте</h3>
+            <p class="text-gray-700">Сборка щита с нуля под проект электрики квартиры или дома</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start gap-4 p-5 bg-gray-50 rounded-lg">
+          <div class="flex-shrink-0 bg-blue-100 p-2 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">При замене старой проводки</h3>
+            <p class="text-gray-700">Демонтаж старого щита с пробками и установка современного с автоматами и УЗО</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start gap-4 p-5 bg-gray-50 rounded-lg">
+          <div class="flex-shrink-0 bg-blue-100 p-2 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Для защиты дорогой техники</h3>
+            <p class="text-gray-700">Установка реле напряжения и УЗИП для защиты от скачков и грозовых разрядов</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Форма связи -->
+<section id="contacts" class="py-10 md:py-14 bg-blue-50">
+  <Contact />
+</section>
+
+<!-- Назад к услугам -->
+<section class="py-8 bg-white border-t border-gray-200">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <a href="/" class="inline-flex items-center gap-2 text-blue-700 font-semibold hover:text-blue-800">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Вернуться на главную
+    </a>
+  </div>
+</section>
+
+</BaseLayout>
