@@ -1,0 +1,316 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Contact from '../components/Contact.astro';
+---
+
+<BaseLayout 
+  title="Электромонтаж в частном доме и СНТ | Михнево, Ступино | Электрик Игорь"
+  description="Электромонтаж в частном доме и СНТ под ключ. Ввод, щит учёта, заземление, внутренняя разводка. Работа со стороны потребителя, помощь с документами для сетевой организации. Выезд по Михнево, Ступино и Ступинскому району."
+>
+
+<!-- Первый экран -->
+<section class="py-12 md:py-16 bg-gradient-to-br from-blue-50 to-white">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 bg-blue-100 text-blue-800 px-4 py-1.5 rounded-full text-sm font-semibold mb-5">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        Частные дома и СНТ Ступинского района
+      </div>
+      
+      <h1 class="text-3xl md:text-5xl font-extrabold text-gray-900 mb-5 leading-tight">
+        Электромонтаж в частном доме <span class="text-blue-700">и СНТ под ключ</span>
+      </h1>
+      
+      <p class="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed">
+        Ввод в дом, щит учёта, заземление, внутренняя разводка. Работаю со стороны потребителя: от проекта до сдачи вашей части работ. Помогу с документами для сетевой организации. Выезд по Михнево, Ступино и всему Ступинскому району.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="tel:+79995567891" class="inline-flex items-center justify-center gap-2 bg-blue-700 text-white px-6 py-3 rounded-lg text-base font-semibold hover:bg-blue-800 transition-colors shadow-lg">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          Позвонить: +7 (999) 556-78-91
+        </a>
+        <a href="#contacts" class="inline-flex items-center justify-center gap-2 bg-white text-blue-700 border-2 border-blue-700 px-6 py-3 rounded-lg text-base font-semibold hover:bg-blue-50 transition-colors">
+          Оставить заявку
+        </a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Проблема -->
+<section class="py-10 md:py-14 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">
+        Что бывает при неправильном электромонтаже
+      </h2>
+      
+      <p class="text-base md:text-lg text-gray-700 mb-6 leading-relaxed">
+        Электромонтаж в частном доме — это не просто «кинуть провод». Это комплекс работ, где каждая ошибка стоит денег, времени и безопасности.
+      </p>
+      
+      <ul class="space-y-4">
+        <li class="flex items-start gap-3 bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          <span class="text-gray-800"><strong>Неправильное сечение вводного кабеля</strong> — при нагрузке 15 кВт нужен минимум 10 мм², иначе перегрев и пожар</span>
+        </li>
+        <li class="flex items-start gap-3 bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          <span class="text-gray-800"><strong>Отсутствие заземления</strong> — опасно для жизни, не пройдёт приёмку энергосбыта</span>
+        </li>
+        <li class="flex items-start gap-3 bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          <span class="text-gray-800"><strong>Щит учёта не соответствует требованиям</strong> — сетевая организация не примет, придётся переделывать</span>
+        </li>
+        <li class="flex items-start gap-3 bg-red-50 p-4 rounded-lg border-l-4 border-red-500">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="flex-shrink-0 mt-0.5"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+          <span class="text-gray-800"><strong>Нарушение высоты подвеса провода</strong> — над дорогой минимум 6 м, над двором 5 м, иначе не примут</span>
+        </li>
+      </ul>
+      
+      <div class="mt-8 p-5 bg-yellow-50 border border-yellow-200 rounded-lg">
+        <p class="text-gray-800 font-medium">
+          ⚠️ В итоге: переделки, штрафы, отказ в подключении. Одна ошибка = 20 000–50 000 ₽ убытков и недели простоя.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Решение -->
+<section class="py-10 md:py-14 bg-blue-50">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">
+        Как я работаю
+      </h2>
+      
+      <p class="text-base md:text-lg text-gray-700 mb-8 leading-relaxed">
+        Электромонтаж под ключ со стороны потребителя. Работаю с воздушным и подземным вводом, однофазным и трёхфазным подключением. Знаю требования местных энергосетей.
+      </p>
+      
+      <div class="space-y-4">
+        <div class="flex items-start gap-4 bg-white p-5 rounded-lg shadow-sm">
+          <div class="flex-shrink-0 bg-green-100 p-2.5 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">✅ Проект и согласование</h3>
+            <p class="text-gray-700">Подготовлю схему подключения, помогу с документами для энергосбыта и СНТ</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start gap-4 bg-white p-5 rounded-lg shadow-sm">
+          <div class="flex-shrink-0 bg-green-100 p-2.5 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">✅ Ввод в дом</h3>
+            <p class="text-gray-700">Воздушный или подземный ввод, правильный кабель, высота подвеса по нормам</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start gap-4 bg-white p-5 rounded-lg shadow-sm">
+          <div class="flex-shrink-0 bg-green-100 p-2.5 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">✅ Щит учёта и заземление</h3>
+            <p class="text-gray-700">Сборка щита с счётчиком, автоматами, УЗО. Контур заземления с замером сопротивления</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start gap-4 bg-white p-5 rounded-lg shadow-sm">
+          <div class="flex-shrink-0 bg-green-100 p-2.5 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">✅ Сдача работ</h3>
+            <p class="text-gray-700">Помогу пройти приёмку вашей части работ, устраню замечания</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- НОВЫЙ БЛОК: Границы ответственности -->
+      <div class="mt-8 p-5 bg-white border border-blue-200 rounded-lg shadow-sm">
+        <h3 class="font-bold text-gray-900 mb-2 flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          Границы ответственности
+        </h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Работы на опорах ЛЭП и пломбировку счётчика выполняет сетевая организация (Россети / МОЭСК). 
+          Я делаю всё со стороны вашего дома: вводное устройство, щит учёта, заземление, внутреннюю разводку. 
+          Помогу подготовить документы для заявки и пройти приёмку.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Что входит -->
+<section class="py-10 md:py-14 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-8 text-center">
+        Что входит в работы
+      </h2>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="border border-gray-200 rounded-lg p-5 hover:border-blue-300 transition-colors">
+          <h3 class="font-bold text-gray-900 mb-2">📋 Проект подключения</h3>
+          <p class="text-sm text-gray-700">Схема ввода, расчёт сечения кабеля, подбор автоматов и УЗО</p>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-5 hover:border-blue-300 transition-colors">
+          <h3 class="font-bold text-gray-900 mb-2">⚡ Вводной кабель</h3>
+          <p class="text-sm text-gray-700">Прокладка кабеля от границы участка до дома (воздух или земля), крепление, изоляция</p>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-5 hover:border-blue-300 transition-colors">
+          <h3 class="font-bold text-gray-900 mb-2">🔌 Щит учёта</h3>
+          <p class="text-sm text-gray-700">Сборка щита с счётчиком, вводным автоматом, УЗИП, автоматами групп</p>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-5 hover:border-blue-300 transition-colors">
+          <h3 class="font-bold text-gray-900 mb-2">🌍 Заземление</h3>
+          <p class="text-sm text-gray-700">Монтаж контура заземления, замер сопротивления, оформление протокола</p>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-5 hover:border-blue-300 transition-colors">
+          <h3 class="font-bold text-gray-900 mb-2">🏠 Внутренняя разводка</h3>
+          <p class="text-sm text-gray-700">Разводка по дому, розетки, выключатели, освещение (по отдельному договору)</p>
+        </div>
+        
+        <div class="border border-gray-200 rounded-lg p-5 hover:border-blue-300 transition-colors">
+          <h3 class="font-bold text-gray-900 mb-2">📝 Документы</h3>
+          <p class="text-sm text-gray-700">Помощь в оформлении заявки в энергосбыт, прохождение приёмки</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Стоимость -->
+<section class="py-10 md:py-14 bg-gray-50">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-6">
+        Стоимость работ
+      </h2>
+      
+      <div class="bg-white p-8 rounded-2xl shadow-lg border border-gray-200">
+        <div class="text-5xl font-extrabold text-blue-700 mb-3">от 30 000 ₽</div>
+        <p class="text-gray-600 mb-6">Зависит от типа ввода, расстояния от границы участка, сложности грунта</p>
+        
+        <div class="space-y-3 text-left mb-6">
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-gray-700">Однофазный ввод (до 10 кВт) — от 30 000 ₽</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-gray-700">Трёхфазный ввод (15 кВт) — от 50 000 ₽</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-gray-700">Подземный ввод (траншея) — от 70 000 ₽</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            <span class="text-gray-700">Полный комплекс (ввод + щит + заземление + разводка) — от 100 000 ₽</span>
+          </div>
+        </div>
+        
+        <div class="p-4 bg-green-50 rounded-lg border border-green-200">
+          <p class="text-gray-800 font-medium">
+            💡 Материалы (кабель, щит, автоматы) оплачиваются отдельно. Помогу подобрать оптимальный вариант по бюджету.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Для кого -->
+<section class="py-10 md:py-14 bg-white">
+  <div class="max-w-6xl mx-auto px-4">
+    
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-extrabold text-gray-900 mb-8 text-center">
+        Кому нужны эти работы
+      </h2>
+      
+      <div class="space-y-4">
+        <div class="flex items-start gap-4 p-5 bg-gray-50 rounded-lg">
+          <div class="flex-shrink-0 bg-blue-100 p-2 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Владельцам новых домов и участков</h3>
+            <p class="text-gray-700">Электромонтаж со стороны дома — от заявки в энергосбыт до первого включения света</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start gap-4 p-5 bg-gray-50 rounded-lg">
+          <div class="flex-shrink-0 bg-blue-100 p-2 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Дачникам в СНТ</h3>
+            <p class="text-gray-700">Электромонтаж в СНТ с учётом общих сетей и ограничений товарищества</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start gap-4 p-5 bg-gray-50 rounded-lg">
+          <div class="flex-shrink-0 bg-blue-100 p-2 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Тем, кому нужно увеличить мощность</h3>
+            <p class="text-gray-700">Переход с однофазного на трёхфазный ввод, увеличение с 5 кВт до 15 кВт</p>
+          </div>
+        </div>
+        
+        <div class="flex items-start gap-4 p-5 bg-gray-50 rounded-lg">
+          <div class="flex-shrink-0 bg-blue-100 p-2 rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+          </div>
+          <div>
+            <h3 class="font-bold text-gray-900 mb-1">Для замены старого ввода</h3>
+            <p class="text-gray-700">Если ввод устарел, повреждён или не соответствует современным нормам</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Форма связи -->
+<section id="contacts" class="py-10 md:py-14 bg-blue-50">
+  <Contact />
+</section>
+
+<!-- Назад к услугам -->
+<section class="py-8 bg-white border-t border-gray-200">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <a href="/" class="inline-flex items-center gap-2 text-blue-700 font-semibold hover:text-blue-800">
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Вернуться на главную
+    </a>
+  </div>
+</section>
+
+</BaseLayout>
