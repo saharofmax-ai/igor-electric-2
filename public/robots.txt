@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://electric-mihnevo.ru/sitemap.xml
